@@ -36,6 +36,7 @@ def list_of_directors(source) #expected input is an array of hashes
 end
 
 def total_gross(source)
+  names = []
   names = list_of_directors(source) #array
   puts names
 #  h = directors_totals(names) #hash
