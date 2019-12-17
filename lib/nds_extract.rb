@@ -39,12 +39,12 @@ end
 def total_gross(source)
   names = list_of_directors(source) #array
   p names
-#  h = directors_totals(names) #hash
+  h = directors_totals(names) #hash
   
   grand_total = 0
   i=0
   while i < names.length do
-#    grand_total += h[names[i]]
+    grand_total += h[names[i]]
     i+=1
   end
   return grand_total
