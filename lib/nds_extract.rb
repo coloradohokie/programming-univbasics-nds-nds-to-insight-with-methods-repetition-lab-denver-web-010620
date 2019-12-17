@@ -36,7 +36,7 @@ def list_of_directors(source) #expected input is an array of hashes
 end
 
 def total_gross(source)
-  names = list_of_directors(directors_database)
+  names = list_of_directors(source)
   h = directors_totals(names)
   
   grand_total = 0
