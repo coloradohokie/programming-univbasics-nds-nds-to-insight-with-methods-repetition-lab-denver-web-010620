@@ -42,7 +42,7 @@ def total_gross(source)
   grand_total = 0
   i=0
   while i < names.length do
-    grand_total += h[names[i]]
+#    grand_total += h[names[i]]
     i+=1
   end
   return grand_total
@@ -57,3 +57,4 @@ def total_gross(source)
   # return the total
 end
 
+puts total_gross(directors_database)
