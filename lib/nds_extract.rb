@@ -38,7 +38,7 @@ end
 def total_gross(source)
   names = []
   names = list_of_directors(source) #array
-  puts names
+  p names
 #  h = directors_totals(names) #hash
   
   grand_total = 0
