@@ -1,7 +1,7 @@
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 require_relative './directors_database'
 
-def directors_totals(source)
+def directors_totals(source) #input is an array
   result = {}
   director_index = 0
   while director_index < source.size do
@@ -9,7 +9,7 @@ def directors_totals(source)
     result[director[:name]] = gross_for_director(director)
     director_index += 1
   end
-  result
+  result #output is a hash: (:name => gross)
 end
 
 def gross_for_director(d)
@@ -25,10 +25,22 @@ def gross_for_director(d)
 end
 
 def list_of_directors(source)
-  # Write this implementation
+  a=[]
+  i=0
+  while i < source.length do
+    a[i] = source[i][:name]
+    i += 1
+  end
+  return a
 end
 
 def total_gross(source)
+  names = list_of_directors(directors_database)
+  grand_total = 0
+  i=0
+  while i < names.length do
+    grand_total += directors_totals(names[i])
+  
   # Write this implementation
   #
   # Should use methods:
