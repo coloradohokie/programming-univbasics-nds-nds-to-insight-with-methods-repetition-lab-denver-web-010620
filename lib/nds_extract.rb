@@ -6,7 +6,8 @@ def directors_totals(source) #input is an array
   director_index = 0
   while director_index < source.size do
     director = source[director_index]
-    result[director[:name]] = gross_for_director(director)
+#    result[director[:name]] = gross_for_director(director)
+    result[:name]] = gross_for_director(director)
     director_index += 1
   end
   result #output is a hash: (:name => gross)
@@ -36,7 +37,6 @@ def list_of_directors(source) #expected input is an array of hashes
 end
 
 def total_gross(source)
-#  names = []
   names = list_of_directors(source) #array
   p names
 #  h = directors_totals(names) #hash
