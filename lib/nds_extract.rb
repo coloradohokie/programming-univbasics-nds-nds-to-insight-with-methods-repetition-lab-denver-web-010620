@@ -24,23 +24,28 @@ def gross_for_director(d)
   total
 end
 
-def list_of_directors(source)
+def list_of_directors(source) #expected input is an array of hashes
+#this method extracts a list of directors and puts them in an array
   a=[]
   i=0
   while i < source.length do
     a[i] = source[i][:name]
     i += 1
   end
-  return a
+  return a #return a simple array [x] - director name
 end
 
 def total_gross(source)
   names = list_of_directors(directors_database)
+  h = directors_totals(names)
+  
   grand_total = 0
   i=0
   while i < names.length do
-    grand_total += directors_totals(names[i])
-  
+    grand_total += h[names[i]]
+    i+=1
+  end
+  return grand_total
   # Write this implementation
   #
   # Should use methods:
