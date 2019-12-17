@@ -45,7 +45,6 @@ def total_gross(source)
     grand_total += h[names[i]]
     i+=1
   end
-  puts grand_total
   return grand_total
   # Write this implementation
   #
@@ -58,4 +57,3 @@ def total_gross(source)
   # return the total
 end
 
-total_gross(directors_database)
